@@ -60,11 +60,17 @@ header {
   text-align: left;
   background-color: var(--blue-clr);
   border-radius: 1rem;
-  width: 90%;
+  min-width: 200px;
+  width: 90vw;
   max-width: 580px;
   padding: 2rem;
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+header span.slogan {
+  font-style: italic;
+  color: var(--white-clr);
 }
 
 main {
@@ -107,9 +113,9 @@ main > ul > li > div.episodeContent {
 main > ul > li > div.episodeContent > img.episodeCover {
   width: 55px;
   height: 55px;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   background-color: var(--light-gray-clr);
-  padding: 0.5rem;
+  padding: 0.25rem;
   display: none;
 }
 
@@ -177,14 +183,18 @@ main > ul > li > div.play {
 main > ul > li > div.play > div.playIcon {
   width: 30px;
   height: 30px;
-  background: url('./assets/images/play-icon.png') no-repeat center center;
+  background: url('./assets/images/play-icon.svg') no-repeat center center;
   background-size: contain;
   cursor: pointer;
+  background-color: var(--blue-clr);
+  border-radius: 0.5rem;
 }
 
 main > ul > li > div.play > div.playIcon.playing {
-  background: url('./assets/images/pause-icon.png') no-repeat center center;
+  background: url('./assets/images/pause-icon.svg') no-repeat center center;
   background-size: contain;
+  background-color: var(--blue-clr);
+  border-radius: 0.5rem;
 }
 
 main > ul > li > div.play > audio {
