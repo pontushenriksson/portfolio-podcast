@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
 :root {
-  --yellow-clr: #daff7d;
-  --purple-clr: #9381ff;
-  --dark-gray-clr: #1f1f1f;
-  --gray-clr: #292929;
-  --light-gray-clr: #656565;
+  --blue-clr: #324eed;
+  --light-blue-clr: #5971ee;
+  --dark-gray-clr: #0d0d0d;
+  --gray-clr: #1c1c1c;
+  --light-gray-clr: #2e2e2e;
   --white-clr: #ffffff;
 }
 
@@ -19,10 +19,82 @@
 body {
   background-color: var(--dark-gray-clr);
   color: var(--white-clr);
+  display: grid;
+  place-items: center;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--gray-clr);
+  border-radius: 0 0 1rem 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+header {
   display: grid;
   place-items: center;
-  max-width: 1200px;
+  text-align: center;
+  background-color: var(--blue-clr);
+  border-radius: 1rem;
+  width: 90vw;
+  max-width: 480px;
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+}
+
+main > ul {
+  display: grid;
+  gap: 4px;
+}
+
+main > ul > li:first-child {
+  border-radius: 1rem 1rem 0 0;
+}
+
+main > ul > li {
+  background-color: var(--gray-clr);
+  width: 90vw;
+  height: 5rem;
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+main > ul > li:last-child {
+  border-radius: 0 0 1rem 1rem;
+}
+
+main > ul > li > div.episodeInfo > div.stats {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+main > ul > li > div.episodeInfo > div.stats > span {
+  font-size: 1.5rem;
 }
