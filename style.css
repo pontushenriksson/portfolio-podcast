@@ -103,6 +103,7 @@ main > ul > li > img.episodeCover {
   border-radius: 0.5rem;
   background-color: var(--light-gray-clr);
   padding: 0.5rem;
+  display: none;
 }
 
 main > ul > li > div.episodeInfo {
@@ -160,4 +161,10 @@ main > ul > li > div.play > div.playIcon.playing {
 
 main > ul > li > div.play > audio {
   display: none;
+}
+
+@media only screen and (min-width: 520px) {
+  main > ul > li > img.episodeCover {
+    display: flex;
+  }
 }
