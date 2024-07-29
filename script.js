@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const audio = container.querySelector('audio');
     const episodeTime = container.querySelector('.episodeTime');
 
+    // Load the audio metadata to get the duration
+    audio.addEventListener('loadedmetadata', function () {
+      const duration = formatTime(audio.duration);
+      episodeTime.textContent = `${duration}`;
+    });
+
     playIcon.addEventListener('click', function () {
       if (audio.paused) {
         // Pause all other audio elements
