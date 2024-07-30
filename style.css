@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   align-items: center;
   max-width: 1200px;
+  width: 90%;
   gap: 2rem;
 }
 
@@ -59,17 +60,24 @@ header {
   text-align: left;
   background-color: var(--blue-clr);
   border-radius: 1rem;
+  min-width: 200px;
   width: 90vw;
-  max-width: 480px;
+  max-width: 580px;
   padding: 2rem;
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+header span.slogan {
+  font-style: italic;
+  color: var(--white-clr);
 }
 
 main {
   display: grid;
   place-items: center;
   gap: 2rem;
+  width: 100%;
 }
 
 main > ul {
@@ -85,7 +93,7 @@ main > ul > li {
   background-color: var(--gray-clr);
   min-width: 200px;
   width: 90vw;
-  max-width: 480px;
+  max-width: 580px;
   min-height: 5rem;
   display: flex;
   align-items: center;
@@ -97,46 +105,71 @@ main > ul > li:last-child {
   border-radius: 0 0 1rem 1rem;
 }
 
-main > ul > li > img.episodeCover {
+main > ul > li > div.episodeContent {
+  display: flex;
+  gap: 1rem;
+}
+
+main > ul > li > div.episodeContent > img.episodeCover {
   width: 55px;
   height: 55px;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   background-color: var(--light-gray-clr);
-  padding: 0.5rem;
+  padding: 0.25rem;
   display: none;
 }
 
-main > ul > li > div.episodeInfo {
+main > ul > li > div.episodeContent > div.episodeInfo {
   display: grid;
   gap: 0.5rem;
 }
 
-main > ul > li > div.episodeInfo > div.episode {
+main > ul > li > div.episodeContent > div.episodeInfo > div.episode {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-main > ul > li > div.episodeInfo > h4.title {
+main > ul > li > div.episodeContent > div.episodeInfo > h4.title {
   font-size: 1rem;
   max-width: 260px;
 }
 
-main > ul > li > div.episodeInfo > div.episode > span {
+main > ul > li > div.episodeContent > div.episodeInfo > div.episode > span {
   font-size: 1.5rem;
 }
 
-main > ul > li > div.episodeInfo > div.episode > div.people {
+main
+  > ul
+  > li
+  > div.episodeContent
+  > div.episodeInfo
+  > div.episode
+  > div.people {
   display: flex;
   flex-direction: column;
 }
 
-main > ul > li > div.episodeInfo > div.episode,
-main > ul > li > div.episodeInfo > div.episode > div.people > a {
+main > ul > li > div.episodeContent > div.episodeInfo > div.episode,
+main
+  > ul
+  > li
+  > div.episodeContent
+  > div.episodeInfo
+  > div.episode
+  > div.people
+  > a {
   color: var(--light-gray-clr);
 }
 
-main > ul > li > div.episodeInfo > div.episode > div.people > a:hover {
+main
+  > ul
+  > li
+  > div.episodeContent
+  > div.episodeInfo
+  > div.episode
+  > div.people
+  > a:hover {
   color: var(--blue-clr);
 }
 
@@ -144,19 +177,24 @@ main > ul > li > div.play {
   display: grid;
   place-items: center;
   gap: 0.5rem;
+  width: 70px;
 }
 
 main > ul > li > div.play > div.playIcon {
   width: 30px;
   height: 30px;
-  background: url('./assets/images/play-icon.png') no-repeat center center;
+  background: url('./assets/images/play-icon.svg') no-repeat center center;
   background-size: contain;
   cursor: pointer;
+  background-color: var(--blue-clr);
+  border-radius: 0.5rem;
 }
 
 main > ul > li > div.play > div.playIcon.playing {
-  background: url('./assets/images/pause-icon.png') no-repeat center center;
+  background: url('./assets/images/pause-icon.svg') no-repeat center center;
   background-size: contain;
+  background-color: var(--blue-clr);
+  border-radius: 0.5rem;
 }
 
 main > ul > li > div.play > audio {
@@ -164,7 +202,7 @@ main > ul > li > div.play > audio {
 }
 
 @media only screen and (min-width: 520px) {
-  main > ul > li > img.episodeCover {
+  main > ul > li > div.episodeContent > img.episodeCover {
     display: flex;
   }
 }
